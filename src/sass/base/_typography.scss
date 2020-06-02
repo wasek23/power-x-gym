@@ -74,23 +74,9 @@ h5{
     font-size: 1.5rem;
 }
 
-// .headingFour{
-//     font-size: 2.5rem;
-//     letter-spacing: .3rem;
-//     font-weight: 400;
-//     color: #333;
-//     margin-top: 1rem;
-//     margin-bottom: 2.5rem;
-//     backface-visibility: hidden;
-//     animation: moveToLeft 1s ease-out;
-        
-//     @include respond(tab_port){
-//         font-size: 2rem;
-//     }
-// }
-
 p{
-    line-height: 150%;
+    line-height: 200%;
+    color: $colorSecondary;
 
     &:not(:last-child){
         margin-bottom: 1rem;

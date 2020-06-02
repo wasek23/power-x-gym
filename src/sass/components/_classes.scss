@@ -1,0 +1,114 @@
+// Classes
+.classes{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 6rem 1rem;
+    }
+}
+
+// Class Post
+.singleClass{
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    button.btn{
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        transform: translate(5%, 50%);
+        text-align: center;
+
+        span{
+            position: absolute;
+            right: 2rem;
+        }
+    }
+}
+
+// Class Post Detail
+.classDetail{
+
+    .container{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 3rem;
+    }
+
+    .left{
+        img{
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        p{
+            margin-bottom: 3rem;
+            margin-left: 1.5rem;
+        }
+
+        ul{
+            list-style-type: none;
+            margin-left: 5rem;
+            
+            li{
+                font-weight: bold;
+                position: relative;
+
+                &:not(:last-child){
+                    margin-bottom: 2.5rem;
+                }
+
+                &::before{
+                    content: "\2713";
+                    color: #fff;
+                    background-color: $colorPrimary;
+                    height: 100%;
+                    padding: 0 .5rem;
+                    border-radius: .3rem;
+                    position: absolute;
+                    top: 0;
+                    left: -4rem;
+                }
+            }
+        }
+    }
+
+    .right{
+        position: relative;
+
+        h2{
+            margin-bottom: 5rem;
+        }
+
+        .schedule{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem 1rem;
+
+            .card{
+                background-color: #fff;
+                padding: 2rem;
+                box-shadow: 0 0 1rem 0 rgba(#000, .1);
+
+                h5{
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 2rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .btn{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

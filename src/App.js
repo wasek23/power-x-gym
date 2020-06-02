@@ -6,20 +6,29 @@ import Footer from './Components/Footer';
 // import NoMatch from './Components/NoMatch';
 import Home from './Components/Pages/Home';
 import Classes from './Components/Pages/Classes';
+import ClassPostDetail from './Components/Posts/ClassPostDetail';
 import Pricing from './Components/Pages/Pricing';
+
+import classesData from './PostData/classesData';
 
 export const WebsiteName = "Power X";
 export const WebsiteSlogan = "Gym Website";
 
 function App() {
+	const classDetail = classesData.filter(singleClass => "/class/" + singleClass.permalink === window.location.pathname);
+
 	return (
 		<Router>
 			<Header></Header>
 
 			<Switch>
-				<Route path="/our-classes">
+				{classesData.length !== 0 && <Route path="/our-classes">
 					<Classes></Classes>
-				</Route>
+				</Route>}
+
+				{classesData.length !== 0 && <Route path="/class/*">
+					{classDetail.map(singleClass => <ClassPostDetail classesData={singleClass} key={singleClass.id}></ClassPostDetail>)}
+				</Route>}
 
 				<Route path="/pricing">
 					<Pricing></Pricing>

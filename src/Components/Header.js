@@ -2,6 +2,8 @@ import React from 'react';
 import $ from 'jquery';
 import { NavLink, Link } from 'react-router-dom';
 
+import classesData from '../PostData/classesData';
+
 const Header = () => {
     //Sticky Navigation
     $(window).on("scroll", () => { $(window).scrollTop() >= 50 ? $(".sticky").addClass("stickyAdd") : $(".sticky").removeClass("stickyAdd") });
@@ -21,7 +23,7 @@ const Header = () => {
 
                         <li><NavLink exact to="/services">Services</NavLink></li>
 
-                        <li><NavLink exact to="/our-classes">Our Classes</NavLink></li>
+                        {classesData.length !== 0 && <li><NavLink exact to="/our-classes">Our Classes</NavLink></li>}
 
                         <li><NavLink exact to="/about-us">About Us</NavLink></li>
 

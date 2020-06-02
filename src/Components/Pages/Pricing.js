@@ -4,6 +4,7 @@ import HeroPage from '../Hero/HeroPage';
 import PlanBG1 from '../../img/pricing-plan/1.jpg';
 import PlanBG2 from '../../img/pricing-plan/2.jpg';
 import PlanBG3 from '../../img/pricing-plan/3.jpg';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
     document.title = "Pricing Plans | " + WebsiteName;
@@ -36,7 +37,7 @@ const Pricing = () => {
                             </ul>
 
                             <div className="cta">
-                                <a href="/" className="btn">Purchase</a>
+                                <Link to="/" className="btn">Purchase</Link>
                             </div>
                         </div> {/* Single Plan */}
 

@@ -65,6 +65,9 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; }
 
+section {
+  padding: 5rem 0; }
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -96,39 +99,52 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700; }
 
+h1 {
+  text-transform: uppercase;
+  font-size: 5.5rem;
+  letter-spacing: .2rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 62em) {
+    h1 {
+      font-size: 5rem; } }
+  @media only screen and (max-width: 48em) {
+    h1 {
+      font-size: 4.5rem; } }
+  @media only screen and (max-width: 36em) {
+    h1 {
+      font-size: 4rem; } }
+
+.headingPrimary {
+  color: #fff;
+  margin-bottom: 1rem;
+  backface-visibility: hidden;
+  animation: moveToRight 1s ease-out; }
+
+.globalHeadingPrimary {
+  animation: moveToTop 1s ease-out; }
+
 h2 {
-  font-size: 2.5rem; }
+  color: #171426;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: .1rem; }
+  @media only screen and (max-width: 62em) {
+    h2 {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 36em) {
+    h2 {
+      font-size: 2.5rem; } }
 
 h3 {
   font-size: 1.7rem; }
 
 h4 {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 400; }
 
 h5 {
   font-size: 1.5rem; }
-
-.headingPrimary {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 5.5rem;
-  letter-spacing: .2rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  backface-visibility: hidden;
-  animation: moveToRight 1s ease-out; }
-  @media only screen and (max-width: 62em) {
-    .headingPrimary {
-      font-size: 5rem; } }
-  @media only screen and (max-width: 48em) {
-    .headingPrimary {
-      font-size: 4.5rem; } }
-  @media only screen and (max-width: 36em) {
-    .headingPrimary {
-      font-size: 4rem; } }
-
-.globalHeadingPrimary {
-  animation: moveToTop 1s ease-out; }
 
 p {
   line-height: 150%; }
@@ -207,6 +223,48 @@ p {
 .backgroundX::after {
   transform: translate(-50%, -50%) rotate(-135deg); }
 
+.pricingPlans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem 1rem; }
+  .pricingPlans .singlePlan {
+    position: relative;
+    text-align: center;
+    padding: 5rem 1rem 14rem 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; }
+    .pricingPlans .singlePlan h2 {
+      color: #fff; }
+    .pricingPlans .singlePlan h1 {
+      margin: 1rem 0 1.5rem 0; }
+    .pricingPlans .singlePlan ul {
+      list-style-type: none;
+      max-width: fit-content;
+      width: max-content;
+      margin: 0 auto;
+      position: relative; }
+      .pricingPlans .singlePlan ul li {
+        color: #fff;
+        text-align: left; }
+        .pricingPlans .singlePlan ul li:not(:last-child) {
+          margin-bottom: 1.5rem; }
+        .pricingPlans .singlePlan ul li::before {
+          content: "\2713";
+          position: absolute;
+          left: -2rem; }
+    .pricingPlans .singlePlan .cta {
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%); }
+
+.sectionTop {
+  text-align: center;
+  margin-bottom: 5rem; }
+  .sectionTop h2 {
+    margin-bottom: 1.5rem; }
+
 #header {
   width: 100%;
   z-index: 500;
@@ -232,10 +290,13 @@ p {
   min-height: 500px;
   height: 100vh;
   padding: 8.5rem 0; }
+  @media only screen and (max-width: 48em) {
+    .heroHomeBox {
+      height: auto; } }
   .heroHomeBox .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    grid-gap: 10rem 3rem;
     height: 100%; }
     @media only screen and (max-width: 48em) {
       .heroHomeBox .container {

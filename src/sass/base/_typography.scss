@@ -21,28 +21,12 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
-h2{
-    font-size: 2.5rem;
-}
-h3{
-    font-size: 1.7rem;
-}
-h4{
-    font-size: $defaultFontSize;
-}
-h5{
-    font-size: 1.5rem;
-}
 
-.headingPrimary{
-    color: #fff;
+h1{
     text-transform: uppercase;
     font-size: 5.5rem;
     letter-spacing: .2rem;
     font-weight: 400;
-    margin-bottom: 1rem;
-    backface-visibility: hidden;
-    animation: moveToRight 1s ease-out;
     
     @include respond(tab_land){
         font-size: 5rem;
@@ -54,41 +38,41 @@ h5{
         font-size: 4rem;
     }
 }
-
+.headingPrimary{
+    color: #fff;
+    margin-bottom: 1rem;
+    backface-visibility: hidden;
+    animation: moveToRight 1s ease-out;
+}
 .globalHeadingPrimary{
     animation: moveToTop 1s ease-out;
 }
 
+h2{
+    color: $colorSecondary;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: .1rem;
 
+    @include respond(tab_land){
+        font-size: 3rem;
+    }
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+}
 
-// .headingSecondary{
-//     font-size: 3.5rem;
-//     letter-spacing: .2rem;
-//     display: inline-block;
-//     background-color: $colorPrimary;
-//     -webkit-background-clip: text;
-//     background-clip: text;
-//     color: transparent;
-//     transition: .2s all ease;
-    
-//     &:hover{
-//         transform: skewX(15deg) skewY(2deg) scale(1.1);
-//         text-shadow: .5rem 1rem 2rem rgba(#000, .2);
-//     }
-
-//     @include respond(tab_big){
-//         font-size: 3.25rem;
-//     }
-//     @include respond(tab_land){
-//         font-size: 3rem;
-//     }
-//     @include respond(tab_port){
-//         font-size: 2.5rem;
-//     }
-//     @include respond(phone){
-//         font-size: 2rem;
-//     }
-// }
+h3{
+    font-size: 1.7rem;
+}
+h4{
+    font-size: $defaultFontSize;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+h5{
+    font-size: 1.5rem;
+}
 
 // .headingFour{
 //     font-size: 2.5rem;

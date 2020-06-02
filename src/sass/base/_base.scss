@@ -41,6 +41,10 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    padding: 5rem 0;
+}
+
 .container{
     max-width: $gridWidth;
     margin: 0 auto;
@@ -53,5 +57,5 @@ body{
 
 ::selection{
     background-color: $colorPrimary;
-    color: #171426;
+    color: $colorSecondary;
 }

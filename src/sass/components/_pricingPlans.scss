@@ -1,0 +1,52 @@
+.pricingPlans{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem 1rem;
+
+    .singlePlan{
+        position: relative;
+        text-align: center;
+        padding: 5rem 1rem 14rem 1rem;
+        background-repeat: no-repeat;
+        background-size :cover;
+        background-position: center center;
+
+        h2{
+            color: #fff;
+        }
+
+        h1{
+            margin: 1rem 0 1.5rem 0;
+        }
+
+        ul{
+            list-style-type: none;
+            max-width: fit-content;
+            width: max-content;
+            margin: 0 auto;
+            position: relative;
+
+            li{
+                color: #fff;
+                text-align: left;
+
+                &:not(:last-child){
+                   margin-bottom: 1.5rem; 
+                }
+
+                &::before{
+                    content: "\2713";
+                    position: absolute;
+                    left: -2rem;
+                }
+            }
+        }
+
+        .cta{
+            position: absolute;
+            bottom: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

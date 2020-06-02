@@ -1,0 +1,179 @@
+.navbar{
+    &Menu{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        @include respond(tab_land){
+            width: 0;
+            height: 100vh;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 10rem 0 0 0;
+            background-color: rgba($colorSecondary, .8);
+            transition: all .3s cubic-bezier(0.8, 0.10, 0.10, .8);
+        }
+    
+        li{
+            color: #fff;
+            padding: .5rem 1.75rem;
+            margin: .5rem;
+            position: relative;
+            transition: all .5s ease;
+
+            @include respond(tab_land){
+                padding: 1.5rem 2rem;
+                text-align: center;
+            }
+    
+            a{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: #fff;
+                padding: .2rem 0;
+                display: inline-block;
+                border-bottom: .2rem solid transparent;
+                transition: all .5s ease;
+    
+                @include respond(tab_land){
+                    font-size: $defaultFontSize;
+                }
+            }
+    
+            ul{
+                list-style-type: none;
+                position: absolute;
+                width: max-content;
+                padding: 1rem;
+                margin-top: .5rem;
+                border-radius: .3rem;
+                background-color: $colorSecondary;
+                box-shadow: 0 .5rem 1rem 0 rgba($colorSecondary, .2);
+                left: -999.9rem;
+                z-index: 10;
+
+                @include respond(tab_land){
+                    padding: 2rem;
+                    margin-top: 1.5rem;
+                }
+    
+                li{
+                    padding: .7rem;
+                }
+            }
+    
+            &:hover ul{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        li:hover{
+            color: $colorPrimary;
+
+            > a{
+                color: $colorPrimary;
+                border-bottom: .2rem solid $colorPrimary;
+            }
+        }
+
+        .active{
+            color: $colorPrimary;
+            border-bottom: .2rem solid $colorPrimary;
+        }
+
+        .dropdown::after{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: .35rem;
+            vertical-align: .15rem;
+            content: "";
+            border-top: .7rem solid;
+            border-right: .65rem solid transparent;
+            border-bottom: 0;
+            border-left: .65rem solid transparent;
+        }
+    }
+
+    // Button & Icons
+    &Checkbox{
+        position: absolute;
+        left: -9999.9rem;
+    }
+    &Button{
+        background-color: $colorSecondary;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        z-index: 1500;
+        box-shadow: 0 1rem 3rem rgba($colorSecondary, .15);
+        text-align: center;
+        cursor: pointer;
+        display: none;
+        
+        @include respond(tab_land){
+            display: block;
+        }
+    }
+    &Icons{
+        position: relative;
+        margin-top: 3rem;
+        
+        &,
+        &::before,
+        &::after{
+            width: 3rem;
+            height: .2rem;
+            background-color: #fff;
+            display: inline-block;
+            
+        }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: .2s all ease;
+        }
+        &::before{ top: -.8rem; }
+        &::after{ top: .8rem; }
+    }
+    &Button:hover &Icons::before{
+        top: -1rem;
+    }
+    &Button:hover &Icons::after{
+        top: 1rem;
+    }
+
+    // Functions
+    @include respond(tab_land){
+        &Checkbox:checked ~ &Menu{
+            width: 50%;
+        }
+        &Checkbox:checked + &Button &Icons{
+            background-color: transparent;
+        }
+        &Checkbox:checked + &Button &Icons::before{
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &Checkbox:checked + &Button &Icons::after{
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+    @include respond(tab_port){
+        &Checkbox:checked ~ &Menu{
+            width: 60%;
+        }
+    }
+    @include respond(phone){
+        &Checkbox:checked ~ &Menu{
+            width: 100%;
+        }
+    }
+}

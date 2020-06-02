@@ -1,0 +1,43 @@
+.hasSidebar{
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    grid-column-gap: 5rem;
+
+    @include respond(tab_land){
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 5rem;
+    }
+}
+
+.ppContent{
+    img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    a{
+        font-size: 1.5rem;
+    }
+
+    blockquote{
+        padding: .5rem 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        border-left: .2rem solid $colorPrimary;
+    }
+}
+
+.fullwidth .ppContent{
+    text-align: justify;
+}
+
+// Single
+.heroPostBox{
+    .blogMeta{
+        background-color: #fff;
+        display: inline-block;
+        margin-top: 2rem;
+        animation: moveToTop 1s ease-out;
+    }
+}

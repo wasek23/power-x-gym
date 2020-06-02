@@ -1,0 +1,39 @@
+.verticalLine{
+    position: relative;
+}
+.verticalLine::before, .verticalLine::after{
+    content: "";
+    width: .1rem;
+    height: 15rem;
+    background-color: #ddd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.verticalLine::before{
+    top: -19rem;
+}
+.verticalLine::after{
+    bottom: -19rem;
+}
+
+
+.backgroundX{
+    position: relative;
+}
+.backgroundX::before, .backgroundX::after{
+    content: "";
+    width: 12rem;
+    height: 45rem;
+    background-color: rgba(#f2f2f3, .1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.backgroundX::before{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+.backgroundX::after{
+    transform: translate(-50%, -50%) rotate(-135deg);
+}

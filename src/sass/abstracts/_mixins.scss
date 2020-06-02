@@ -1,0 +1,77 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+@mixin positionCenterCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Media Query
+
+// 3800px min : uhd
+// 3320px min : ultra_wide_qhd
+// 2840px min : wide_qhd
+// 2360px min : qhd
+// 1880px min : full_hd
+// 1400px min : wide_hd
+// 1200px - 1399px Normal style : hd
+// 1200px max : tab_big
+// 992px max : tab_land
+// 768px max : tab_port
+// 576px max : phone
+
+// Use in sass
+//  @include respond(wide_hd){}
+//  @include respond(full_hd){}
+//  @include respond(qhd){}
+//  @include respond(wide_qhd){}
+//  @include respond(ultra_wide_qhd){}
+//  @include respond(uhd){}
+
+//  @include respond(tab_big){}
+//  @include respond(tab_land){}
+//  @include respond(tab_port){}
+//  @include respond(phone){}
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == wide_hd{
+        @media only screen and (min-width: 87.5em){ @content };
+    }
+    @if $breakpoint == full_hd{
+        @media only screen and (min-width: 117.5em){ @content };
+    }
+    @if $breakpoint == qhd{
+        @media only screen and (min-width: 147.5em){ @content };
+    }
+    @if $breakpoint == wide_qhd{
+        @media only screen and (min-width: 177.5em){ @content };
+    }
+    @if $breakpoint == ultra_wide_qhd{
+        @media only screen and (min-width: 207.5em){ @content };
+    }
+    @if $breakpoint == uhd{
+        @media only screen and (min-width: 237.5em){ @content };
+    }
+    
+    
+    @if $breakpoint == tab_big{
+        @media only screen and (max-width: 75em){ @content };
+    }
+    @if $breakpoint == tab_land{
+        @media only screen and (max-width: 62em){ @content };
+    }
+    @if $breakpoint == tab_port{
+        @media only screen and (max-width: 48em){ @content };
+    }
+    @if $breakpoint == phone{
+        @media only screen and (max-width: 36em){ @content };
+    }
+}
+// ORDER: Base + typography > general layout + grid > page layout > components

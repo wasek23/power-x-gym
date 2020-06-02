@@ -1,12 +1,18 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald&display=swap');
+@import url('css/main.css');
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+
+.heroHomeBox, .heroGlobalBox {
+    background-image: linear-gradient(to right, rgba(23, 20, 38, 0.7), rgba(23, 20, 38, 0.7)), url(img/hero-small.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (min-resolution: 192dpi) and (min-width: 36.06em), only screen and (min-width: 87.5em) {
+    .heroHomeBox, .heroGlobalBox {
+        background-image: linear-gradient(to right, rgba(23, 20, 38, 0.7), rgba(23, 20, 38, 0.7)), url(img/hero.jpg);
+    }
 }

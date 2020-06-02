@@ -1,0 +1,116 @@
+.work{
+    &_menu{
+        list-style-type: none;
+        text-transform: uppercase;
+        text-align: center;
+
+        a{
+            display: inline-block;
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: .05rem;
+            margin: .5rem 0;
+            padding: .6rem 1.6rem;
+            border-radius: 5rem;
+            cursor: pointer;
+            transition: all .5s ease;
+
+            &:not(:last-child){
+                margin-right: .5rem;
+            }
+
+            &.active,
+            &:hover{
+                color: #fff;
+                background-color: $colorPrimary;
+            }
+
+            @include respond(phone){
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &Items{
+        width: 100%;
+    }
+
+    &Item{
+        width: 24%;
+        margin: 0 .5% 1% .5%;
+
+        @include respond(tab_big){
+            width: 32%;
+            margin: 0 .666% 1.333% .666%;
+        }
+        @include respond(tab_port){
+            width: 48%;
+            margin: 0 1% 2% 1%;
+        }
+        @include respond(phone){
+            width: 96%;
+            margin: 0 2% 4% 2%;
+        }
+
+        figure{
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            border-radius: .3rem;
+            display: grid;
+
+            .workImg{
+                display: inherit;
+            }
+            .workImg:after{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: .3rem;
+                transition: all .3s cubic-bezier(0.3, 0.1, 0.58, 1);
+            }
+            &:hover .workImg:after{
+                background: linear-gradient(to bottom right, rgba($colorPrimaryLight, .8), rgba($colorPrimaryDark, .8));
+            }
+
+            img{
+                width: 100%;
+                border-radius: .3rem;
+                transition: all .3s cubic-bezier(0.3, 0.1, 0.58, 1);
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+
+            .workDetails{
+                position: absolute;
+                color: #ffffff;
+                width: 100%;
+                text-align: center;
+                padding: .5rem;
+                top: 100%;
+                opacity: 0;
+                transition: all .3s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+                .projectCategory{
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
+                .projectTitle{
+                    font-size: 1.8rem;
+                }
+            }
+            &:hover .workDetails{
+                top: 50%;
+                transform: translate(0, -50%);
+                opacity: 1;
+            }
+        }
+    }
+}

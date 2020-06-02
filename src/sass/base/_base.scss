@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    // This defines what 1rem is
+    font-size: 62.5%; // 1rem = 10px.
+    scroll-behavior: smooth;
+    
+    @include respond(wide_hd){
+        font-size: 72.75%; // 1rem = 11.64px.
+    }
+    @include respond(full_hd){
+        font-size: 97.75%; // 1rem = 15.64px.
+    }
+    @include respond(qhd){
+        font-size: 122.75%; // 1rem = 19.64px.
+    }
+    @include respond(wide_qhd){
+        font-size: 147.75%; // 1rem = 23.64px.
+    }
+    @include respond(ultra_wide_qhd){
+        font-size: 172.75%; // 1rem = 27.64px.
+    }
+    @include respond(uhd){
+        font-size: 197.75%; // 1rem = 31.64px.
+    }
+    
+    @include respond(tab_land){
+        font-size: 56.25%; // 1rem = 9px.
+    }
+    @include respond(tab_port){
+        font-size: 50%; // 1rem = 8px.
+    }
+}
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: $gridWidth;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    &:not(:last-child){
+        margin-bottom: $gutterVertical;
+    }
+}
+
+::selection{
+    background-color: $colorPrimary;
+    color: #171426;
+}

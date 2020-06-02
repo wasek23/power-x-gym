@@ -1,0 +1,71 @@
+.composition{
+    position: relative;
+    
+    @include respond(tab_land){
+        @include clearfix;
+        width: 95%;
+        margin: 0 auto;
+    }
+    &Photo{
+        width: 55%;
+        border-radius: .2rem;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .4);
+        position: absolute;
+        z-index: 10;
+        outline-offset: 1.5rem;
+        transition: .2s all ease;
+        
+        @include respond(tab_land){
+            float: left;
+            position: relative;
+            width: 33.33333%;
+            box-shadow: 0 1.5rem 3rem rgba(#000, .2);
+            outline-offset: 0;
+            transform: scale(1.2);
+        }
+        &P1{
+            left: 0;
+            top: -2rem;
+            
+            @include respond(tab_land){
+                top: 1rem;
+            }
+        }
+        &P2{
+            right: 0;
+            top: 2rem;
+            
+            @include respond(tab_land){
+                top: -1rem;
+                z-index: 15;
+            }
+        }
+        &P3{
+            left: 20%;
+            top: 10rem;
+            
+            @include respond(tab_land){
+                left: 0;
+                top: 1rem;
+            }
+        }
+        &:hover{
+            z-index: 20;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba(#000, .5);
+            outline: 1.5rem solid $colorPrimary;
+            
+            @include respond(tab_land){
+                transform: scale(1.2) translateY(0);
+                outline: none;
+            }
+        }
+    }
+    &:hover &Photo:not(:hover){
+        transform: scale(.95);
+        
+        @include respond(tab_land){
+            transform: scale(1.1);
+        }
+    }
+}

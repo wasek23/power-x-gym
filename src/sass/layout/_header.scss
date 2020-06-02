@@ -1,0 +1,105 @@
+#header{
+    width: 100%;
+    z-index: 500;
+    position: fixed;
+    transition: all .5s ease;
+}
+
+.navbar{
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.sticky{
+    background-color: rgba($colorSecondary, .0);
+    padding: 2rem 0;
+}
+.stickyAdd{
+    background-color: rgba($colorSecondary, .8);
+    box-shadow: 0 .5rem 1rem 0 rgba($colorSecondary, .3);
+    padding: 1rem 0;
+}
+
+
+// Hero Sections
+.heroHomeBox{
+    min-height: 500px;
+    height: 100vh;
+    padding: 8.5rem 0;
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        height: 100%;
+    
+        @include respond(tab_port){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .left{
+        align-self: center;
+
+        p{
+            color: #eee;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .right{
+        align-self: center;
+
+        .heroVideo{
+            text-align: center;
+            width: 100%;
+            min-height: 30rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+    }
+}
+
+.heroGlobalBox {
+    min-height: 250px;
+    height: 60vh;
+    padding: 8.5rem 0;
+}
+
+
+// .heroBox{
+//     @include positionCenterCenter;
+//     backface-visibility: hidden;
+//     text-align: center;
+//     width: 100%;
+// }
+
+// .heroButton{
+//     margin-top: 4rem;
+// }
+
+// .typed-strings {
+// 	display: none;
+// }
+// .typed-cursor{
+//     opacity: 1;
+//     margin-left: .5rem;
+//     animation: blink 1s infinite;
+// }
+
+// .heroHomeBox{
+//     background-size: cover;
+//     background-position: center center;
+//     position: relative;
+// }
+
+// .heroGlobalBox,
+// .heroPostBox{
+//     position: relative;
+// }

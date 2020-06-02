@@ -1,0 +1,75 @@
+.testimonial{
+    width: 75%;
+    background-color: rgba(#fff, .6);
+    margin: 0 auto;
+    padding: 6rem;
+    padding-left: 9rem;
+    border-radius: .3rem;
+    font-size: $defaultFontSize;
+    box-shadow: 0 3rem 6rem rgba(#000, .1);
+    transform: skewX(-12deg);
+    
+    @include respond(tab_big){
+        width: 90%;
+        padding: 6rem 4rem;
+        padding-left: 7rem;
+    }
+    @include respond(tab_port){
+        transform: skewX(0);
+    }
+    @include respond(phone){
+        width: 100%;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 8rem;
+    }
+
+    &Shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        
+        @include respond(tab_port){
+            transform: translateX(-3rem) skewX(0);
+        }
+    }
+
+    &Img{
+        height: 100%;
+        transform: scale(1.3);
+        transition: .5s all ease;
+        backface-visibility: hidden;
+    }
+    &:hover &Img{
+        transform: scale(1.05);
+        filter: blur(.3rem) brightness(80%);
+    }
+
+    &Caption{
+        @include positionCenterCenter;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: .5s all ease;
+        backface-visibility: hidden;
+    }
+    &:hover &Caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    
+    &Text{
+        transform: skewX(12deg);
+        
+        @include respond(tab_port){
+            transform: skewX(0);
+        }
+    }
+}

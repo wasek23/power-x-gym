@@ -1,0 +1,105 @@
+.contactForm{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+
+    textarea{
+        height: 23.7rem;
+    }
+
+    .submit_btn{
+        float: right;
+    }
+}
+
+.form{    
+    @include respond(tab_port){
+        grid-template-columns: 1fr;
+        grid-row-gap: 1.5rem;
+    }
+
+    &Group:not(:last-child){
+        margin-bottom: 1.5rem;
+    }
+
+    &Input{
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: .2rem;
+        background-color: rgba(#fff, .5);
+        border: none;
+        border-bottom: .3rem solid transparent;
+        width: 100%;
+        display: block;
+        transition: .3s all ease;
+        
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(#000, .1);
+            border-bottom: .3rem solid $colorSecondary;
+            
+            &:invalid{
+                border-bottom: .3rem solid $colorTertiaryDark;
+            }
+        }
+        &::-webkit-input-placeholder{
+            color: $colorDark2;
+        }
+    }
+
+    &Input:placeholder-shown + &Label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &Label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: .3s all ease;
+    }
+}
+
+.searchform{
+    position: relative;
+
+    .screen-reader-text{
+        position: absolute;
+        left: -999.9rem;
+    }
+
+    input{
+        border: none;
+        outline: none;
+    }
+
+    .searchInput{
+        width: 100%;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        color: #fff;
+        @include gradientBG;
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+
+        &::placeholder{
+            color: #fff;
+        }
+    }
+
+    .searchSubmit{
+        background: url(../img/search.svg);
+        background-size: cover;
+        position: absolute;
+        right: 1rem;
+        top: .375rem;
+        width: 2.75rem;
+        height: 2.75rem;
+        cursor: pointer;
+    }
+}

@@ -48,11 +48,15 @@
         p{
             color: #eee;
             margin-bottom: 2rem;
+            animation: moveToTop .5s ease-out .75s;
+            animation-fill-mode: backwards;
         }
     }
 
     .right{
         align-self: center;
+        animation: moveToLeft 1.5s ease-out;
+        animation-fill-mode: backwards;
 
         .heroVideo{
             text-align: center;
@@ -70,36 +74,7 @@
     min-height: 250px;
     height: 60vh;
     padding: 8.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
-// .heroBox{
-//     @include positionCenterCenter;
-//     backface-visibility: hidden;
-//     text-align: center;
-//     width: 100%;
-// }
-
-// .heroButton{
-//     margin-top: 4rem;
-// }
-
-// .typed-strings {
-// 	display: none;
-// }
-// .typed-cursor{
-//     opacity: 1;
-//     margin-left: .5rem;
-//     animation: blink 1s infinite;
-// }
-
-// .heroHomeBox{
-//     background-size: cover;
-//     background-position: center center;
-//     position: relative;
-// }
-
-// .heroGlobalBox,
-// .heroPostBox{
-//     position: relative;
-// }

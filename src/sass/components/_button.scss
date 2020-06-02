@@ -27,7 +27,7 @@
     }
 
     &Animated{
-        animation: moveToTop .5s ease-out .75s;
+        animation: moveToTop .75s ease-out 1s;
         animation-fill-mode: backwards;
     }
 

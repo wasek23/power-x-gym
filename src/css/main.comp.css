@@ -1,3 +1,31 @@
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -99,6 +127,9 @@ h5 {
     .headingPrimary {
       font-size: 4rem; } }
 
+.globalHeadingPrimary {
+  animation: moveToTop 1s ease-out; }
+
 p {
   line-height: 150%; }
   p:not(:last-child) {
@@ -125,7 +156,7 @@ p {
   outline: none; }
 
 .btnAnimated {
-  animation: moveToTop .5s ease-out .75s;
+  animation: moveToTop .75s ease-out 1s;
   animation-fill-mode: backwards; }
 
 .btn-primary {
@@ -213,9 +244,13 @@ p {
     align-self: center; }
     .heroHomeBox .left p {
       color: #eee;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      animation: moveToTop .5s ease-out .75s;
+      animation-fill-mode: backwards; }
   .heroHomeBox .right {
-    align-self: center; }
+    align-self: center;
+    animation: moveToLeft 1.5s ease-out;
+    animation-fill-mode: backwards; }
     .heroHomeBox .right .heroVideo {
       text-align: center;
       width: 100%;
@@ -228,7 +263,10 @@ p {
 .heroGlobalBox {
   min-height: 250px;
   height: 60vh;
-  padding: 8.5rem 0; }
+  padding: 8.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .navbarMenu {
   list-style-type: none;

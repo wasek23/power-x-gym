@@ -16,5 +16,4 @@ const AdvanceGym = {
         </ul>
     </>
 };
-
 export default AdvanceGym;

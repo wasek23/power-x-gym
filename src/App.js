@@ -10,6 +10,7 @@ import ClassPostDetail from './Components/Posts/ClassPostDetail';
 import Pricing from './Components/Pages/Pricing';
 
 import classesData from './PostData/classesData';
+import pricingPlanData from './PostData/pricingPlanData';
 
 export const WebsiteName = "Power X";
 export const WebsiteSlogan = "Gym Website";
@@ -30,9 +31,9 @@ function App() {
 					{classDetail.map(singleClass => <ClassPostDetail classesData={singleClass} key={singleClass.id}></ClassPostDetail>)}
 				</Route>}
 
-				<Route path="/pricing">
+				{pricingPlanData.length !== 0 && <Route path="/pricing">
 					<Pricing></Pricing>
-				</Route>
+				</Route>}
 
 				<Route path="/">
 					<Home></Home>

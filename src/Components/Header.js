@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { NavLink, Link } from 'react-router-dom';
 
 import classesData from '../PostData/classesData';
+import pricingPlanData from '../PostData/pricingPlanData';
 
 const Header = () => {
     //Sticky Navigation
@@ -27,7 +28,7 @@ const Header = () => {
 
                         <li><NavLink exact to="/about-us">About Us</NavLink></li>
 
-                        <li><NavLink exact to="/pricing">Pricing</NavLink></li>
+                        {pricingPlanData.length !== 0 && <li><NavLink exact to="/pricing">Pricing</NavLink></li>}
                     </ul> {/* Navbar Menu */}
                 </div> {/* Container */}
             </nav> {/* Navbar */}

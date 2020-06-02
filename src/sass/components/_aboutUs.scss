@@ -1,0 +1,43 @@
+.aboutUs{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+        // align-items: center;
+    }
+
+    .left{
+        align-self: center;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .right{
+        position: relative;
+        padding-top: 10rem;
+
+        &::before{
+            content: "About Us";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 5.5rem;
+            letter-spacing: .2rem;
+            color: #f4f4f4;
+        }
+
+        h2{
+            margin-bottom: 1.5rem;
+        }
+
+        p{
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+}

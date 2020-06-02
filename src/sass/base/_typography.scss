@@ -2,7 +2,8 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: $defaultFontSize;
-    color: #333;
+    color: $colorSecondary;
+    background-color: #fff;
 }
 
 .primaryColor{
@@ -63,7 +64,8 @@ h2{
 }
 
 h3{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 h4{
     font-size: $defaultFontSize;

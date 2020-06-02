@@ -8,7 +8,7 @@ const HeroHome = () => {
                 <div className="left">
                     <h1 className="headingPrimary">The Best Fitness Studio in Town</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cumque, nam harum, earum vitae qui sed odio accusantium quae, illum delectus facilis assumenda veniam. Deserunt laborum vitae doloremque nemo iure?</p>
-                    <Link to="/" className="btn btn-primary btnAnimated">Join Us</Link>
+                    <Link to="/pricing" className="btn btn-primary btnAnimated">Join Us</Link>
                 </div> {/* Left */}
 
                 <div className="right">

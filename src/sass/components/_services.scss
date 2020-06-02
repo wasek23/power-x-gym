@@ -1,0 +1,38 @@
+.services{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem 1rem;
+    }
+
+    .card{
+        text-align: center;
+        padding: 3rem 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        img{
+            height: 5.5rem;
+            margin: 2.5rem 0;
+        }
+
+        h2{
+            margin: 1.5rem 0;
+            color: #fff;
+            transition: all .3s ease;
+        }
+
+        p{
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        &:hover{
+            h2{
+                color: $colorPrimary;
+            }
+        }
+    }
+}

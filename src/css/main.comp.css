@@ -65,6 +65,18 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; }
 
+section {
+  padding: 5rem 0; }
+  section > h2 {
+    text-align: center;
+    margin-bottom: 5rem; }
+
+.sectionTop {
+  text-align: center;
+  margin-bottom: 5rem; }
+  .sectionTop h2 {
+    margin-bottom: 1.5rem; }
+
 .container {
   max-width: 114rem;
   margin: 0 auto;
@@ -75,6 +87,16 @@ body {
 ::selection {
   background-color: #fcd842;
   color: #171426; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem; }
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -152,8 +174,6 @@ p {
     margin-bottom: 1rem; }
 
 .aboutUs .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem; }
 
 .aboutUs .left {
@@ -217,8 +237,6 @@ p {
     box-shadow: 0 0.5rem 1rem rgba(252, 216, 66, 0.2); }
 
 .classes .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem 1rem; }
 
 .singleClass {
@@ -330,8 +348,6 @@ p {
   transform: translate(-50%, -50%) rotate(-135deg); }
 
 .pricingPlans {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem 1rem; }
   .pricingPlans .singlePlan {
     position: relative;
@@ -365,21 +381,7 @@ p {
       left: 50%;
       transform: translateX(-50%); }
 
-section {
-  padding: 5rem 0; }
-  section > h2 {
-    text-align: center;
-    margin-bottom: 5rem; }
-
-.sectionTop {
-  text-align: center;
-  margin-bottom: 5rem; }
-  .sectionTop h2 {
-    margin-bottom: 1.5rem; }
-
 .services .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem 1rem; }
 
 .services .card {
@@ -388,9 +390,11 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
-  .services .card img {
+  .services .card svg {
     height: 5.5rem;
-    margin: 2.5rem 0; }
+    margin: 2.5rem 0;
+    fill: #fff;
+    transition: all .3s ease; }
   .services .card h2 {
     margin: 1.5rem 0;
     color: #fff;
@@ -399,12 +403,12 @@ section {
     font-size: 1.4rem;
     font-weight: 600;
     color: #fff; }
+  .services .card:hover svg {
+    fill: #fcd842; }
   .services .card:hover h2 {
     color: #fcd842; }
 
 .trainingPrograms .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem; }
   .trainingPrograms .container .singleClass button.btn {
     text-align: left;
@@ -414,8 +418,6 @@ section {
     margin-top: 0; }
 
 .whyChooseUs .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem 1rem; }
 
 .whyChooseUs .card {
@@ -435,6 +437,35 @@ section {
     font-weight: 600; }
   .whyChooseUs .card:hover {
     border: 2px solid #fcd842; }
+
+footer {
+  background-color: #171426;
+  color: #fff; }
+  footer .container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+    grid-gap: 3rem 1rem;
+    padding: 5rem 0; }
+  footer h5 {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1.5rem; }
+  footer ul {
+    list-style-type: none; }
+    footer ul li:not(:last-child) {
+      margin-bottom: 1rem; }
+  footer a {
+    color: #fff;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all .3s ease; }
+    footer a:hover {
+      color: #fcd842; }
+  footer p {
+    color: #fff;
+    font-size: 1.4rem; }
+  footer > p {
+    color: #828282;
+    text-align: center; }
 
 #header {
   width: 100%;

@@ -1,8 +1,6 @@
 // Classes
 .classes{
     .container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 6rem 1rem;
     }
 }

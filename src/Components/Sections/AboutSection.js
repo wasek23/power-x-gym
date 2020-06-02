@@ -4,8 +4,8 @@ import AboutLeft from '../../img/about-left.jpg';
 
 const AboutSection = () => {
     return (
-        <section className="aboutUs">
-            <div className="container">
+        <section className="aboutUs" id="aboutUs">
+            <div className="container grid2">
                 <div className="left">
                     <img src={AboutLeft} alt="About Left" />
                 </div>

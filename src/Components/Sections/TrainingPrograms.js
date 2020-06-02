@@ -9,10 +9,10 @@ const TrainingPrograms = () => {
 
     return (
         <>
-            {classesData.length !== 0 && <section className="trainingPrograms">
+            {classesData.length !== 0 && <section className="trainingPrograms" id="trainingPrograms">
                 <h2>Training <span className="primaryColor">Programs</span></h2>
 
-                <div className="container">
+                <div className="container grid2">
                     {classesData.map(singleClass => <ClassPost classesData={singleClass} key={singleClass.id}></ClassPost>)}
                 </div>
 

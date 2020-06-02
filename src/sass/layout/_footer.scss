@@ -1,57 +1,46 @@
-#footer{
-    color: $colorLight4;
-    background-color: $colorDark1;
-    font-size: 1.4rem;
-    text-align: center;
-    padding-top: 5rem;
-}
+footer{
+    background-color: $colorSecondary;
+    color: #fff;
 
-.footer{
-    &Logo{
-        source,
-        img{
-            width: 15rem;
-            height: auto;
-        }
+    .container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+        grid-gap: 3rem 1rem;
+        padding: 5rem 0;
     }
-    &Nav{
+
+    h5{
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 1.5rem;
+    }
+
+    ul{
         list-style-type: none;
-        padding: 6rem 0;
-        
-        &Item{
-            display: inline-block;
-            
+
+        li{
             &:not(:last-child){
-                margin-right: 1.5rem;
+                margin-bottom: 1rem;
             }
         }
     }
-    &Link{
-        &:link,
-        &:visited{
-            color: $colorLight1;
-            background-color: $colorDark1;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            display: inline-block;
-            transition: .2s all ease;
-        }
-        &:hover,
-        &:active{
+
+    a{
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: all .3s ease;
+
+        &:hover{
             color: $colorPrimary;
-            box-shadow: 0 1rem 2rem rgba(#000, .4);
-            transform: rotate(5deg) scale(1.3);
         }
     }
-    &Copyright{
-        width: 85%;
-        margin: 0 auto;
-        border-top: .1rem solid $colorDark3;
-        padding: 2rem 0;
-        
-        @include respond(tab_land){
-            width: 100%;
-        }
+
+    p{
+        color: #fff;
+        font-size: 1.4rem;
+    }
+    >p{
+        color: #828282;
+        text-align: center;
     }
 }

@@ -6,10 +6,10 @@ import GiftIcon from '../../img/icon/gift.png';
 
 const WhyChooseUs = () => {
     return (
-        <section className="whyChooseUs">
+        <section className="whyChooseUs" id="whyChooseUs">
             <h2><span className="primaryColor">Why</span> Choose Us</h2>
 
-            <div className="container">
+            <div className="container grid3">
                 <div className="card">
                     <img src={BodyIcon} alt="Icon" />
                     <h3>Free Fitness Training</h3>

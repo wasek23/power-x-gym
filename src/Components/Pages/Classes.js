@@ -14,7 +14,7 @@ const Classes = () => {
 
             <main>
                 {classesData.length !== 0 && <section className="classes">
-                    <div className="container">
+                    <div className="container grid3">
                         {classesData.map(singleClass => <ClassPost classesData={singleClass} key={singleClass.id}></ClassPost>)}
                     </div>
                 </section>}

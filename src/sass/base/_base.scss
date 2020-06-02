@@ -41,6 +41,23 @@ body{
     overflow-x: hidden;
 }
 
+section{
+    padding: 5rem 0;
+
+    > h2{
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+}
+.sectionTop{
+    text-align: center;
+    margin-bottom: 5rem;
+
+    h2{
+        margin-bottom: 1.5rem;
+    }
+}
+
 .container{
     max-width: $gridWidth;
     margin: 0 auto;

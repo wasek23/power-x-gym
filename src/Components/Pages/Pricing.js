@@ -18,7 +18,7 @@ const Pricing = () => {
                         <p>Facere mollitia similique commodi officia distinctio corrupti animi laborum amet doloremque iste et, aliquid.</p>
                     </div>
 
-                    <div className="pricingPlans container">
+                    <div className="pricingPlans container grid3">
                         {pricingPlanData.map(plan => <PricePlan pricingPlanData={plan} key={plan.id}></PricePlan>)}
                     </div> {/* Pricing Plans */}
                 </section>}

@@ -347,6 +347,40 @@ p {
 .backgroundX::after {
   transform: translate(-50%, -50%) rotate(-135deg); }
 
+.membership .progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  position: relative; }
+  .membership .progressBar::after {
+    content: "";
+    width: 96%;
+    border-bottom: .4rem dotted #b7b7b7;
+    position: absolute;
+    left: 2%;
+    top: 50%; }
+  .membership .progressBar > span {
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+    font-size: 2.5rem;
+    background-color: #afafaf;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    z-index: 10;
+    font-weight: bold;
+    position: relative; }
+    .membership .progressBar > span.primaryBG {
+      background-color: #fcd842; }
+    .membership .progressBar > span span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .membership form.memberForm {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -365,6 +399,10 @@ p {
     margin-top: 0;
     width: auto;
     float: right; }
+  .membership form.memberForm span.error {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 600; }
 
 .paymentSystem {
   border: 1px solid #171426;

@@ -59,7 +59,14 @@ const GymMembership = (payment) => {
             <HeroPage title="Your Gym Membership"></HeroPage>
 
             <main className="membership">
+
                 <div className="container">
+                    <section className="progressBar">
+                        <span className="primaryBG"><span>1</span></span>
+                        <span className={memberInfo && "primaryBG"}><span>2</span></span>
+                        <span className={memberId && "primaryBG"}><span>3</span></span>
+                    </section>
+
                     <section style={{ display: memberInfo ? 'none' : 'block' }}>
                         <form onSubmit={handleSubmit(onSubmit)} className="memberForm">
                             <div>
@@ -95,6 +102,7 @@ const GymMembership = (payment) => {
                             <div>
                                 <label htmlFor="gender">Gender</label><br />
                                 <select name="gender" id="gender" ref={register({ required: true })} >
+                                    <option value="" disabled selected>Select</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="others">Others</option>

@@ -14,7 +14,7 @@ const PricePlan = props => {
             {content}
 
             <div className="cta">
-                <Link to="/" className="btn">Purchase</Link>
+                <Link to="/gym-membership" className="btn">Purchase</Link>
             </div>
         </div>
     );

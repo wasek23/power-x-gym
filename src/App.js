@@ -8,6 +8,7 @@ import Home from './Components/Pages/Home';
 import Classes from './Components/Pages/Classes';
 import ClassPostDetail from './Components/Posts/ClassPostDetail';
 import Pricing from './Components/Pages/Pricing';
+import GymMembership from './Components/Pages/GymMembership';
 
 import classesData from './PostData/classesData';
 import pricingPlanData from './PostData/pricingPlanData';
@@ -34,6 +35,10 @@ function App() {
 				{pricingPlanData.length !== 0 && <Route path="/pricing">
 					<Pricing></Pricing>
 				</Route>}
+
+				<Route path="/gym-membership">
+					<GymMembership></GymMembership>
+				</Route>
 
 				<Route path="/">
 					<Home></Home>

@@ -1,0 +1,47 @@
+[debug] [2020-06-03T20:05:29.492Z] ----------------------------------------------------------------------
+[debug] [2020-06-03T20:05:29.495Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Wasek Bellah\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-06-03T20:05:29.495Z] CLI Version:   7.15.1
+[debug] [2020-06-03T20:05:29.495Z] Platform:      win32
+[debug] [2020-06-03T20:05:29.495Z] Node Version:  v12.13.0
+[debug] [2020-06-03T20:05:29.496Z] Time:          Thu Jun 04 2020 02:05:29 GMT+0600 (Bangladesh Standard Time)
+[debug] [2020-06-03T20:05:29.497Z] ----------------------------------------------------------------------
+[debug] [2020-06-03T20:05:29.497Z] 
+[debug] [2020-06-03T20:05:29.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-03T20:05:29.544Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Web\projects\react\power-x-gym
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using w-power-x-gym.
+[debug] [2020-06-03T20:05:34.015Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-06-03T20:05:34.015Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-06-03T20:05:35.048Z] <<< HTTP RESPONSE 200
+[debug] [2020-06-03T20:05:35.079Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/w-power-x-gym  
+ 
+[debug] [2020-06-03T20:05:36.043Z] <<< HTTP RESPONSE 200
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
